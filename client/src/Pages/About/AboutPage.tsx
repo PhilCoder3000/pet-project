@@ -1,14 +1,16 @@
 import React from 'react';
+import { NavBar } from 'widgets/NavBar';
 
 interface AboutPageProps {
   uuid?: string;
 }
 
-export function AboutPage({
-  uuid,
-}: AboutPageProps) {
+export function AboutPage({ uuid }: AboutPageProps) {
   return (
-    <h1>About</h1>
+    <div>
+      <NavBar />
+      <h1>about</h1>
+    </div>
   );
 }
 

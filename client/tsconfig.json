@@ -1,6 +1,9 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",
+    "baseUrl": "./",
+    "paths": {
+      "*": ["./src/*"]
+    },
     "outDir": "./dist/",
     "noImplicitAny": true,
     "module": "ESNext",
@@ -15,5 +18,13 @@
     "compilerOptions": {
       "module": "CommonJS"
     }
-  }
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/*.scss",
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }
