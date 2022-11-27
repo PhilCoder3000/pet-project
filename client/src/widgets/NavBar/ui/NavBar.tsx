@@ -1,20 +1,27 @@
-import { useTheme } from 'app/providers/themeProvider/useTheme';
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { classNames } from 'shared/classNames/classNames';
-// import cls from './NavBar.module.scss';
+import { useTheme } from "app/styles/useTheme";
+import React from "react";
+import { Link } from "react-router-dom";
+import { classNames } from "shared/classNames/classNames";
 
 interface NavBarProps {
   className?: string;
 }
 
 export function NavBar({ className }: NavBarProps) {
-  const toggleTheme = useTheme();
+  const { theme, toggleTheme } = useTheme();
   return (
-    <div>
+    <div className="flex h-14 items-center justify-end bg-blue-300 px-3 shadow-sm dark:bg-slate-800 dark:text-green-100">
       <Link to="/">Main</Link>
-      <Link to="/about">About</Link>
-      <button onClick={toggleTheme}>theme</button>
+      <Link className="mx-3" to="/about">
+        About
+      </Link>
+      <button
+        className="bg-slate-800 px-3 text-blue-300 dark:bg-blue-300 dark:text-slate-800"
+        onClick={toggleTheme}
+      >
+        {theme === "dark" && "Light"}
+        {theme === "light" && "Dark"}
+      </button>
     </div>
   );
 }

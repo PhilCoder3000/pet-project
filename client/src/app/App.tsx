@@ -4,7 +4,6 @@ import { Route, Routes } from 'react-router-dom';
 import { router } from '../pages';
 import { classNames } from '../shared/classNames/classNames';
 import { SuspenseAppProvider } from './providers/suspense/SuspenseProviders';
-// import './styles/index.scss';
 import './styles/index.css'
 
 interface AppProps {

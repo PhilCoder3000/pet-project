@@ -9,7 +9,6 @@ export function AboutPage({ uuid }: AboutPageProps) {
   return (
     <div>
       <NavBar />
-      <h1>about</h1>
     </div>
   );
 }
