@@ -2,9 +2,7 @@ import { RuleSetRule } from 'webpack';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import { BuildOptions } from './types/config';
 
-export function buildLoaders({ mode, paths }: BuildOptions): RuleSetRule[] {
-  const isDev = mode === 'development';
-
+export function buildLoaders({ paths }: BuildOptions): RuleSetRule[] {
   const fontLoader = {
     test: /\.(woff(2)?)(\?v=\d+\.\d+\.\d+)?$/,
     use: [

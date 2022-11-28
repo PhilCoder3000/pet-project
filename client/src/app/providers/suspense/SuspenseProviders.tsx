@@ -1,4 +1,4 @@
-import { FC, PropsWithChildren, Suspense } from 'react';
+import { PropsWithChildren, Suspense } from 'react';
 
 export function SuspenseAppProvider({ children }: PropsWithChildren) {
   return <Suspense fallback={<div>loading App</div>}>{children}</Suspense>;

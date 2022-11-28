@@ -1,12 +1,8 @@
-import { useCallback, useState } from 'react';
+import { useCallback } from 'react';
 
-type AccessibleValue =
-  | string
-  | number
-  | boolean
-  | Array<string | number | boolean>;
+type AccessibleValue = string | number | boolean | Array<string | number | boolean>;
 
-type GetItem<T> = (key: string) => T | null
+type GetItem<T> = (key: string) => T | null;
 
 export function useLocalStorage<T>() {
   const getItem: GetItem<T> = useCallback((key: string) => {
@@ -17,14 +13,11 @@ export function useLocalStorage<T>() {
     return null;
   }, []);
 
-  const setItem = useCallback(
-    (key: string, value: AccessibleValue | Record<string, AccessibleValue>) => {
-      window.localStorage.setItem(key, JSON.stringify(value));
-    },
-    [],
-  );
+  const setItem = useCallback((key: string, value: AccessibleValue | Record<string, AccessibleValue>) => {
+    window.localStorage.setItem(key, JSON.stringify(value));
+  }, []);
   return {
     getItem,
     setItem,
-  }
+  };
 }

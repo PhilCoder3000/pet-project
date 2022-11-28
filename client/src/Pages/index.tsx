@@ -3,13 +3,15 @@ import { addSuspense } from '../app/providers/suspense/addSuspense';
 import { AboutPage } from './About';
 import { MainPage } from './Main';
 
-export const router = createBrowserRouter(addSuspense([
-  {
-    path: '/',
-    element: <MainPage />
-  }, 
-  {
-    path: '/about',
-    element: <AboutPage />
-  }
-]))
+export const router = createBrowserRouter(
+  addSuspense([
+    {
+      path: '/',
+      element: <MainPage />,
+    },
+    {
+      path: '/about',
+      element: <AboutPage />,
+    },
+  ]),
+);

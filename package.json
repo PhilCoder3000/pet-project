@@ -1,9 +1,0 @@
-{
-  "devDependencies": {
-    "@pmmmwh/react-refresh-webpack-plugin": "^0.5.10",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-prettier": "^4.2.1",
-    "prettier": "^2.8.0",
-    "react-refresh": "^0.14.0"
-  }
-}
