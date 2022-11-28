@@ -1,9 +1,4 @@
 import path from 'path';
-import HTMLWebpackPlugin from 'html-webpack-plugin';
-import webpack from 'webpack';
-import { buildPlugins } from './config/build/buildPlugins';
-import { buildLoaders } from './config/build/buildLoaders';
-import { buildResolvers } from './config/build/buildResolvers';
 import { buildWebpackConfig } from './config/build/buildWebpackConfig';
 import { BuildEnv, BuildPaths } from './config/build/types/config';
 

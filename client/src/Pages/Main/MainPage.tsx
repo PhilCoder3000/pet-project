@@ -1,14 +1,14 @@
-import { useTheme } from "app/styles/useTheme";
-import React from "react";
-import { Link } from "react-router-dom";
-import { NavBar } from "widgets/NavBar";
+import { useTheme } from 'app/styles/useTheme';
+import React from 'react';
+import { NavBar } from 'widgets/NavBar';
 
 interface MainPageProps {
   uuid?: string;
 }
 
-function MainPage({ uuid }: MainPageProps) {
+function MainPage() {
   const toggleTheme = useTheme();
+
   return (
     <div>
       <NavBar />

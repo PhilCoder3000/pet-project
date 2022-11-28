@@ -1,13 +1,8 @@
 import { useTheme } from "app/styles/useTheme";
 import React from "react";
 import { Link } from "react-router-dom";
-import { classNames } from "shared/classNames/classNames";
 
-interface NavBarProps {
-  className?: string;
-}
-
-export function NavBar({ className }: NavBarProps) {
+export function NavBar() {
   const { theme, toggleTheme } = useTheme();
   return (
     <div className="flex h-14 items-center justify-end bg-blue-300 px-3 shadow-sm dark:bg-slate-800 dark:text-green-100">
@@ -24,4 +19,9 @@ export function NavBar({ className }: NavBarProps) {
       </button>
     </div>
   );
+}
+
+const helloYou    = (name)=> {
+  name = 'you' || name   ;
+  console.log("hello" + name + "!" )
 }
