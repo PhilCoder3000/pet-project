@@ -1,8 +1,8 @@
-import HTMLWebpackPlugin from "html-webpack-plugin";
-import webpack, { WebpackPluginInstance } from "webpack";
-import MiniCssExtractPlugin from "mini-css-extract-plugin";
-import ReactRefreshWebpackPlugin from "@pmmmwh/react-refresh-webpack-plugin";
-import { BuildOptions } from "./types/config";
+import HTMLWebpackPlugin from 'html-webpack-plugin';
+import webpack, { WebpackPluginInstance } from 'webpack';
+import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin';
+import { BuildOptions } from './types/config';
 
 export function buildPlugins({ paths }: BuildOptions): WebpackPluginInstance[] {
   return [
@@ -11,8 +11,8 @@ export function buildPlugins({ paths }: BuildOptions): WebpackPluginInstance[] {
       template: paths.html,
     }),
     new MiniCssExtractPlugin({
-      filename: "css/[name].[contenthash:8].css",
-      chunkFilename: "css/[name].[contenthash:8].css",
+      filename: 'css/[name].[contenthash:8].css',
+      chunkFilename: 'css/[name].[contenthash:8].css',
     }),
     new webpack.HotModuleReplacementPlugin(),
     new ReactRefreshWebpackPlugin(),

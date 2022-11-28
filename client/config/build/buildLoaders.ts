@@ -1,18 +1,18 @@
-import { RuleSetRule } from "webpack";
-import MiniCssExtractPlugin from "mini-css-extract-plugin";
-import { BuildOptions } from "./types/config";
+import { RuleSetRule } from 'webpack';
+import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+import { BuildOptions } from './types/config';
 
 export function buildLoaders({ mode, paths }: BuildOptions): RuleSetRule[] {
-  const isDev = mode === "development";
+  const isDev = mode === 'development';
 
   const fontLoader = {
     test: /\.(woff(2)?)(\?v=\d+\.\d+\.\d+)?$/,
     use: [
       {
-        loader: "file-loader",
+        loader: 'file-loader',
         options: {
-          name: "[name].[ext]",
-          outputPath: "fonts/",
+          name: '[name].[ext]',
+          outputPath: 'fonts/',
         },
       },
     ],
@@ -22,9 +22,9 @@ export function buildLoaders({ mode, paths }: BuildOptions): RuleSetRule[] {
     test: /\.(png|jpe?g|gif)$/i,
     use: [
       {
-        loader: "file-loader",
+        loader: 'file-loader',
         options: {
-          outputPath: "files/",
+          outputPath: 'files/',
         },
       },
     ],
@@ -35,9 +35,9 @@ export function buildLoaders({ mode, paths }: BuildOptions): RuleSetRule[] {
     issuer: /\.tsx?$/,
     use: [
       {
-        loader: "@svgr/webpack",
+        loader: '@svgr/webpack',
         options: {
-          outputPath: "assets/",
+          outputPath: 'assets/',
         },
       },
     ],
@@ -46,12 +46,12 @@ export function buildLoaders({ mode, paths }: BuildOptions): RuleSetRule[] {
   const cssLoader = {
     test: /\.css$/i,
     include: paths.src,
-    use: [MiniCssExtractPlugin.loader, "css-loader", "postcss-loader"],
+    use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader'],
   };
 
   const tsLoader = {
     test: /\.tsx?$/,
-    use: "ts-loader",
+    use: 'ts-loader',
     exclude: /node_modules/,
   };
 
