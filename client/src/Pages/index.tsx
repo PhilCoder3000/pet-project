@@ -1,3 +1,4 @@
+import { NotFoundPage } from 'pages/NotFound';
 import { createBrowserRouter } from 'react-router-dom';
 import { addSuspense } from '../app/providers/suspense/addSuspense';
 import { AboutPage } from './About';
@@ -12,6 +13,10 @@ export const router = createBrowserRouter(
     {
       path: '/about',
       element: <AboutPage />,
+    },
+    {
+      path: '*',
+      element: <NotFoundPage />,
     },
   ]),
 );
