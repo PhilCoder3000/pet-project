@@ -20,11 +20,10 @@
     }
   },
   "include": [
-    "src/**/*.ts",
-    "src/**/*.tsx",
-    "src/**/*.scss",
+    ".",
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "**/?(*.)+(spec|test).[tj]s?(x)"
   ]
 }

@@ -1,5 +1,10 @@
+import { render, screen } from '@testing-library/react';
+import MainPage from './MainPage';
+import { BrowserRouter } from 'react-router-dom';
+
 describe('MainPage', () => {
-  test('hello tests', () => {
-    expect(true).toBe(true);
+  test('it should render', () => {
+    render(<MainPage />, { wrapper: BrowserRouter });
+    expect(screen.getByTestId('main-page')).toBeInTheDocument();
   });
 });

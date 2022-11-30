@@ -1,9 +1,8 @@
-import React from 'react';
 import { NavBar } from 'widgets/NavBar';
 
 function MainPage() {
   return (
-    <div>
+    <div data-testid="main-page">
       <NavBar />
       Main
     </div>
